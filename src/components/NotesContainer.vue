@@ -1,11 +1,9 @@
 <template>
-  <div id="logs-container" class="row mt-4 flex-grow-1">
-    <div class="col-lg center-block">
-      <div class="card h-100">
-        <ul id="logs" class="list-group">
-          <NoteView v-for="note of this.notes" :key="note.id" :note="note" @update-note="updateNote" @delete-note="deleteNote"></NoteView>
-        </ul>
-      </div>
+  <div class="mt-4 mb-4 h-100" style="flex-grow: 1; overflow-y: scroll;">
+    <div class="card" style="height: 100%;">
+      <ul id="logs" class="list-group">
+        <NoteView v-for="note of this.notes" :key="note.id" :note="note" @update-note="updateNote" @delete-note="deleteNote"></NoteView>
+      </ul>
     </div>
   </div>
 </template>
@@ -63,10 +61,5 @@ export default {
 <style scoped>
 li:nth-child(odd) {
   background: #F4FAFF;
-}
-
-#logs-container {
-  overflow-y: scroll;
-  height: 75vh;
 }
 </style>

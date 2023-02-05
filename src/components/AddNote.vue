@@ -1,5 +1,5 @@
 <template>
-  <div class="input-group fixed-bottom p-2">
+  <div class="input-group p-2 no-grow">
     <input 
         ref="text-input" 
         class="form-control" 

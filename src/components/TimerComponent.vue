@@ -1,8 +1,8 @@
 <template>
-  <div class="row mt-4" style="text-align: center;">
+  <div class="row mt-4 no-grow" style="text-align: center;">
       <h1 class="display-1" ref="timer">{{ strtime }}</h1>
   </div>
-  <div class="row">
+  <div class="row no-grow">
     <div class="col-lg d-flex" style="align-items: baseline;">
       <div class="no-grow">
         <button class="btn btn-light rounded" @click="$emit('download-notes')">

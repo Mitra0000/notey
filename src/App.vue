@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
-    <HeaderComponent></HeaderComponent>
-    <TimerComponent ref="timer-component" @copy-to-clipboard="copyNotes()" @download-notes="downloadNotes()"></TimerComponent>
-    <NotesContainer ref="notes-container"></NotesContainer>
+  <HeaderComponent></HeaderComponent>
+  <div class="d-flex" style="flex-direction: column; height: 100vh;">
+    <div class="container d-flex" style="flex-direction: column; flex-grow: 1; overflow-y: hidden">
+      <TimerComponent ref="timer-component" @copy-to-clipboard="copyNotes()" @download-notes="downloadNotes()"></TimerComponent>
+      <NotesContainer ref="notes-container"></NotesContainer>
+    </div>
     <AddNote @add-note="createNote"></AddNote>
   </div>
 </template>
