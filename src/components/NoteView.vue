@@ -11,7 +11,7 @@
           v-on:blur="saveContents"
           autocomplete="off" >
       <div class="no-grow">
-        <div class="btn-group-sm">
+        <div class="btn-group-sm d-flex">
           <button class="btn" @click="editing_mode? saveContents() : editContents()">
             <i :class="['bi', editing_mode ? 'bi-check-lg' : 'bi-pencil']"></i>
           </button>

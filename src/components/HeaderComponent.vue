@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="page-header fixed-top" style="pointer-events: none;">
+  <div id="header" class="page-header" style="pointer-events: none;">
     <h1 class="display-1 ms-4">Notey</h1>
   </div>
 </template>
@@ -11,5 +11,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+@media screen and (min-width: 600px) {
+  #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
 </style>
