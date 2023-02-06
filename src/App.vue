@@ -53,6 +53,7 @@ export default {
   },
   mounted() {
     window.addEventListener("resize", () => {this.$refs["parent"].style.height = window.innerHeight + "px";});
+    this.$refs["parent"].style.height = window.innerHeight + "px";
   },
 }
 </script>
