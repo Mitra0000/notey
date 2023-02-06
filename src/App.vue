@@ -1,6 +1,6 @@
 <template>
   <HeaderComponent></HeaderComponent>
-  <div class="d-flex" style="flex-direction: column; height: 100vh;">
+  <div ref="parent" class="d-flex" style="flex-direction: column; height: 100vh;">
     <div class="container d-flex" style="flex-direction: column; flex-grow: 1; overflow-y: hidden">
       <TimerComponent ref="timer-component" @copy-to-clipboard="copyNotes()" @download-notes="downloadNotes()"></TimerComponent>
       <NotesContainer ref="notes-container"></NotesContainer>
@@ -50,7 +50,10 @@ export default {
       }
       return words.join(" ");
     },
-  }
+  },
+  mounted() {
+    window.addEventListener("resize", () => {this.$refs["parent"].style.height = window.innerHeight + "px";});
+  },
 }
 </script>
 
